@@ -15,6 +15,27 @@ body {
   font-weight: 300;
   line-height: 1.6; }
 
+.container {
+  display: grid;
+  /*  GRID ROW LOGIC: 
+ grid-template-rows: 1st row 80vh - adaptive to viewport height;
+    2nd row min-content adaptive to content and will grow in height automatically as
+    our goal of this section is to contain all content;
+    3rd row is adaptive to viewport width 40vw;
+    4th + rows repeat(3, min-content);
+    */
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  /*  GRID COLUMN LOGIC:
+    -   Decision of 8 columns accepted as for simple grid;
+    -   First column (sidebar) is fixed adn set to 8rem;
+    -   Reasonable viewport width is something about 1140px;
+    -   1140 / 8 = 142.5px => trunc it to 14rem;
+    -   Simply setting the width to 14rem does'n make ght grid adaptive;
+    -   So, set minmax to min = min-content, and max = 14rem;
+    -   The remaining space on wider than 1140px screens is set by 2 columns 1fr each   
+    */
+  grid-template-columns: 8rem 1fr repeat(8, minmax(min-content, 14rem)) 1fr; }
+
 .sidebar {
   background-color: #c69963; }
 
