@@ -55,5 +55,5 @@ body {
     -   So, set minmax to min = min-content, and max = 14rem;
     -   The remaining space on wider than 1140px screens is set by 2 columns 1fr each   
     */
-    grid-template-columns: 8rem 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
+    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
 }
