@@ -43,8 +43,7 @@ body {
     3rd row is adaptive to viewport width 40vw;
     4th + rows repeat(3, min-content);
     */
-  // grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-  grid-template-rows: repeat(2, min-content) 40vw repeat(3, min-content);
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
 
   /*  GRID COLUMN LOGIC:
     -   Decision of 8 columns accepted as for simple grid;
@@ -62,8 +61,4 @@ body {
       6rem,
       1fr
     ) [full-end];
-
-  & > * {
-    font-size: 2rem;
-  }
 }
