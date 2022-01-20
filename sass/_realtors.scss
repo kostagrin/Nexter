@@ -2,4 +2,34 @@
     background-color: $color-secondary;
     grid-column: col-start 7 / full-end;
     // grid-row: 1 / 2;
+
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center ;
+    grid-row-gap: 2rem;
+
+    &__list {
+        display: grid;
+        grid-template-columns: 7rem max-content;
+        grid-column-gap: 2rem;
+        grid-row-gap: 5vh;
+        align-items: center;
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        border-radius: 50%;
+    }
+
+    // &__details {
+
+    // }
+
+    &__sold {
+        text-transform: uppercase;
+        color: $color-grey-light-2;
+        margin-top: -3px;
+    }
 }

@@ -35,8 +35,6 @@ body {
     -   The remaining space on wider than 1140px screens is set by 2 columns 1fr each   
     */
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
-  .container > * {
-    font-size: 2rem; }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
@@ -165,7 +163,26 @@ huge
 
 .realtors {
   background-color: #101d2c;
-  grid-column: col-start 7 / full-end; }
+  grid-column: col-start 7 / full-end;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  grid-row-gap: 2rem; }
+  .realtors__list {
+    display: grid;
+    grid-template-columns: 7rem max-content;
+    grid-column-gap: 2rem;
+    grid-row-gap: 5vh;
+    align-items: center; }
+  .realtors__img {
+    display: block;
+    width: 100%;
+    border-radius: 50%; }
+  .realtors__sold {
+    text-transform: uppercase;
+    color: #aaa;
+    margin-top: -3px; }
 
 .features {
   grid-column: center-start / center-end;
