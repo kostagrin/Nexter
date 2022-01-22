@@ -4,15 +4,17 @@
     background-image: linear-gradient(rgba($color-secondary, .9), rgba($color-secondary, .9)), url(../img/hero.jpeg);
     background-size: cover;
     background-position: center;
-    // padding: 8rem;
-    // padding-top: 4rem;
-    padding: 4rem 0 8rem;
+    padding: 4rem 6rem 8rem;
 
     display: grid;
     grid-row-gap: 1.5rem;
-    grid-template-rows: 1fr min-content 6rem 1fr;
-    grid-template-columns: max-content;
+    grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+    grid-template-columns: minmax(min-content, max-content);
     justify-content: center;
+
+    @media only screen and (max-width: 52.875em) {
+        grid-column: 1 / -1;
+    }
 
     &__logo {
         height: 3rem;
@@ -20,8 +22,11 @@
     }
 
     &__btn {
-        justify-self: start;
-        align-self: start;
+        place-self: start;
+
+        @media only screen and (max-width: 52.875em) {
+            margin: 5rem 0 3rem;
+        }
     }
 
     &__seenon-text {
@@ -47,9 +52,11 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         justify-items: center;
+        align-items: center;
 
         & img {
-            height: 2.5rem;
+            max-height: 2.5rem;
+            max-width: 100%;
             filter: opacity(70%);
         }
     }

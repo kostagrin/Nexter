@@ -3,15 +3,26 @@
     grid-column: full-start / full-end;
     // grid-row: 6 / 7;
     padding: 8rem;
+
+    @media only screen and (max-width: 57.25em) {
+        padding: 4rem 8rem;
+    }
 }
 
 .nav-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    grid-gap: 1.3rem;
     align-items: center;
     list-style: none;
+
+    @media only screen and (max-width: 57.25em) {
+        grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    }
+
     
+
+
     &__item {
         text-align: center;
     }
@@ -50,4 +61,8 @@
     text-align: center;
     width: 70%;
     margin: 6rem auto 0;
+
+    @media only screen and (max-width: 57.25em) {
+       margin-top: 4rem;
+    }
 }
